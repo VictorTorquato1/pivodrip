@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque | Pivodrip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header class="cabecalho py-3">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+            <div>
+                <a class="marca" href="index.html">Pivodrip <span class="marca-secundaria">Valley</span></a>
+                <p class="lead mb-0">Peças de irrigação com cores e qualidade Valley.</p>
+            </div>
+            <nav class="menu">
+                <a class="item-menu" href="index.html">Início</a>
+                <a class="item-menu active" href="estoque.html">Estoque</a>
+                <a class="item-menu" href="assistencia.html">Assistência</a>
+                <a class="item-menu" href="contato.html">Contato</a>
+                <a class="item-menu item-carrinho" href="carrinho.html"><i class="bi bi-cart3"></i> Carrinho <span
+                        id="cartBadge" class="badge bg-light text-dark">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="titulo-secao text-center mb-5">
+            <span class="subtitulo">Estoque atualizado</span>
+            <h1>Compre os melhores itens para irrigação</h1>
+            <p class="text-muted mx-auto" style="max-width: 720px;">Selecione peças com estoque disponível, veja
+                características técnicas e adicione ao carrinho com animações suaves.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-4">
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade">
+                    <div class="col-md-6 col-xl-4">
+                        <article class="produto rounded-4 p-4 shadow-sm animate-fade">
+                            <div class="icone-produto bg-light rounded-circle mb-3"><i
+                                    class="bi bi-droplet-fill text-success"></i></div>
+                            <h2 class="h5">Gotejador regulável</h2>
+                            <p class="text-muted">Controle preciso de vazão para hortas e jardins.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="preco-produto">R$ 9,90</span>
+                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="GD01"
+                                    data-name="Gotejador regulável" data-price="9.90">Adicionar</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-1">
+                            <div class="icone-produto bg-light rounded-circle mb-3"><i
+                                    class="bi bi-filter-square text-success"></i>
+                            </div>
+                            <h2 class="h5">Filtro de disco</h2>
+                            <p class="text-muted">Proteção para sistemas de irrigação contra partículas e sujeira.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="preco-produto">R$ 79,90</span>
+                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="FD02"
+                                    data-name="Filtro de disco" data-price="79.90">Adicionar</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-2">
+                            <div class="icone-produto bg-light rounded-circle mb-3"><i
+                                    class="bi bi-wind text-success"></i></div>
+                            <h2 class="h5">Microaspersor em L</h2>
+                            <p class="text-muted">Cobertura ampla e uniforme para canteiros e jardins.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="preco-produto">R$ 18,50</span>
+                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="MA03"
+                                    data-name="Microaspersor em L" data-price="18.50">Adicionar</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-3">
+                            <div class="icone-produto bg-light rounded-circle mb-3"><i
+                                    class="bi bi-plug-fill text-success"></i>
+                            </div>
+                            <h2 class="h5">IrrigaMágico</h2>
+                            <p class="text-muted">Dispositivo de irrigação automática para jardins e hortas.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="preco-produto">R$ 12,90</span>
+                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="AR04"
+                                    data-name="IrrigaMágico" data-price="12.90">Adicionar</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-4">
+                            <div class="icone-produto bg-light rounded-circle mb-3"><i
+                                    class="bi bi-gear-fill text-success"></i>
+                            </div>
+                            <h2 class="h5">Válvula de esfera</h2>
+                            <p class="text-muted">Fechamento fácil e rápido para seções de irrigação.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="preco-produto">R$ 34,90</span>
+                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="VE05"
+                                    data-name="Válvula de esfera" data-price="34.90">Adicionar</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-5">
+                            <div class="icone-produto bg-light rounded-circle mb-3"><i
+                                    class="bi bi-droplet-half text-success"></i>
+                            </div>
+                            <h2 class="h5">Mangueira reforçada</h2>
+                            <p class="text-muted">Combina flexibilidade e resistência em uma só peça.</p>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="preco-produto">R$ 22,00</span>
+                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="MR06"
+                                    data-name="Mangueira reforçada" data-price="22.00">Adicionar</button>
+                            </div>
+                        </article>
+                    </div>
+            </div>
+    </main>
+
+    <footer class="site-footer py-4">
+        <div class="container text-center">
+            <p class="mb-1">Pivodrip Valley &copy; 2026</p>
+            <p class="small">Estoque atualizado para projetos de irrigação.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/cart.js"></script>
+</body>
+
+</html>

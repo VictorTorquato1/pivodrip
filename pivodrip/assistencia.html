@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistência | Pivodrip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <header class="cabecalho py-3">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div>
+        <a class="marca" href="index.html">Pivodrip <span class="marca-secundaria">Valley</span></a>
+        <p class="lead mb-0">Assistência técnica em irrigação.</p>
+      </div>
+      <nav class="menu">
+        <a class="item-menu" href="index.html">Início</a>
+        <a class="item-menu" href="estoque.html">Estoque</a>
+        <a class="item-menu active" href="assistencia.html">Assistência</a>
+        <a class="item-menu" href="contato.html">Contato</a>
+        <a class="item-menu item-carrinho" href="carrinho.html"><i class="bi bi-cart3"></i> Carrinho <span id="cartBadge" class="badge bg-light text-dark">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <div class="titulo-secao text-center mb-5">
+      <span class="subtitulo">Suporte especializado</span>
+      <h1>Assistência para seu sistema de irrigação</h1>
+      <p class="text-muted mx-auto" style="max-width: 740px;">A Pivodrip Valley oferece atendimento técnico para manutenção, ajustes e otimização do seu projeto.</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="cartao-suporte rounded-4 p-4 shadow-sm animate-fade">
+          <i class="bi bi-tools icone-destaque"></i>
+          <h2>Montagem e instalação</h2>
+          <p>Projeto e implantação do sistema com peças certificadas e mão de obra especializada.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="cartao-suporte rounded-4 p-4 shadow-sm animate-fade delay-1">
+          <i class="bi bi-droplet-half icone-destaque"></i>
+          <h2>Ajuste de vazão</h2>
+          <p>Calibração de gotejadores e microaspersores para distribuição equilibrada.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="cartao-suporte rounded-4 p-4 shadow-sm animate-fade delay-2">
+          <i class="bi bi-shield-lock icone-destaque"></i>
+          <h2>Manutenção preventiva</h2>
+          <p>Avaliação de filtros, válvulas e conexões para evitar perdas e falhas no sistema.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6 animate-fade">
+        <h2>Como funciona a assistência</h2>
+        <ol class="assist-list">
+          <li><strong>1.</strong> Você nos envia a solicitação de suporte.</li>
+          <li><strong>2.</strong> Um técnico agenda a visita no local ou o atendimento remoto.</li>
+          <li><strong>3.</strong> Identificamos o problema e propomos a melhor solução.</li>
+          <li><strong>4.</strong> Executamos o serviço com peças de qualidade Pivodrip.</li>
+        </ol>
+      </div>
+      <div class="col-lg-5 animate-fade delay-1">
+        <div class="formulario-assistencia rounded-4 p-4 shadow-sm">
+          <h3>Peça assistência</h3>
+          <form>
+            <div class="mb-3">
+              <label for="nomeAssistencia" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nomeAssistencia" placeholder="Seu nome">
+            </div>
+            <div class="mb-3">
+              <label for="telefoneAssistencia" class="form-label">Telefone</label>
+              <input type="tel" class="form-control" id="telefoneAssistencia" placeholder="(00) 00000-0000">
+            </div>
+            <div class="mb-3">
+              <label for="descricao" class="form-label">Descrição do problema</label>
+              <textarea class="form-control" id="descricao" rows="4" placeholder="Explique o que está acontecendo"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Solicitar assistência</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container text-center">
+      <p class="mb-1">Pivodrip Valley &copy; 2026</p>
+      <p class="small">Assistência técnica e suporte em irrigação.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/cart.js"></script>
+</body>
+</html>
