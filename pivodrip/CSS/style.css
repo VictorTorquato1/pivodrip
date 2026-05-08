@@ -145,6 +145,10 @@ body::before {
   box-shadow: var(--shadow);
 }
 
+.produto {
+  cursor: pointer;
+}
+
 .subtitulo {
   display: inline-flex;
   text-transform: uppercase;
@@ -420,4 +424,228 @@ button.btn-primary:hover {
 .carrinho-vazio i {
   font-size: 3rem;
   color: var(--pivo-green);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--surface);
+  padding: 2.5rem;
+  max-width: 480px;
+  width: 90%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+  border: 1px solid rgba(47, 59, 58, 0.08);
+  box-shadow: var(--shadow);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--gray-dark);
+  transition: color 0.2s ease;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: var(--pivo-green);
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-image-container {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 72, 38, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal-product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+.modal-icone {
+  width: 80px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: rgba(20, 72, 38, 0.12) !important;
+}
+
+#modalTitle {
+  color: var(--gray-dark);
+  font-weight: 700;
+}
+
+#modalDescription {
+  line-height: 1.6;
+}
+
+.preco-modal {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--pivo-green);
+}
+
+#modalAddToCart {
+  background: var(--pivo-green);
+  border-color: var(--pivo-green);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.35s ease;
+}
+
+#modalAddToCart:hover {
+  background: var(--pivo-green-dark);
+  border-color: var(--pivo-green-dark);
+  transform: translateY(-2px);
+}
+
+#modalBudget {
+  background: var(--pivo-green);
+  border-color: var(--pivo-green);
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+#modalBudget:hover {
+  background: var(--pivo-green-dark);
+  border-color: var(--pivo-green-dark);
+  transform: translateY(-2px);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ESTILOS DO CARRINHO */
+.cart-empty {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px dashed rgba(20, 72, 38, 0.4);
+  text-align: center;
+}
+
+.cart-empty i {
+  font-size: 3rem;
+  color: var(--pivo-green);
+}
+
+.cart-table {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-table table {
+  background: #fff;
+}
+
+.cart-table table thead {
+  background: #f5f5f5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cart-table table thead th {
+  font-weight: 600;
+  color: var(--gray-dark);
+  padding: 1.25rem;
+  border: none;
+}
+
+.cart-table table tbody td {
+  padding: 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  vertical-align: middle;
+}
+
+.cart-table table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cart-summary {
+  background: var(--surface);
+  border-radius: 24px;
+  border: 1px solid rgba(47, 59, 58, 0.08);
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cart-summary h3 {
+  font-weight: 700;
+  color: var(--gray-dark);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart-summary p {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 1.75rem;
+    width: 95%;
+  }
+
+  .modal-body {
+    text-align: center;
+  }
+
+  .cart-summary {
+    margin-top: 2rem;
+  }
 }

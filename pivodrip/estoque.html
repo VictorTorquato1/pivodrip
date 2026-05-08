@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estoque | Pivodrip</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/style.css" />
 </head>
 
 <body>
@@ -18,15 +18,17 @@
         <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
             <div>
                 <a class="marca" href="index.html">Pivodrip <span class="marca-secundaria">Valley</span></a>
-                <p class="lead mb-0">Peças de irrigação com cores e qualidade Valley.</p>
+                <p class="lead mb-0">
+                    Peças de irrigação com cores e qualidade Valley.
+                </p>
             </div>
             <nav class="menu">
                 <a class="item-menu" href="index.html">Início</a>
                 <a class="item-menu active" href="estoque.html">Estoque</a>
                 <a class="item-menu" href="assistencia.html">Assistência</a>
                 <a class="item-menu" href="contato.html">Contato</a>
-                <a class="item-menu item-carrinho" href="carrinho.html"><i class="bi bi-cart3"></i> Carrinho <span
-                        id="cartBadge" class="badge bg-light text-dark">0</span></a>
+                <a class="item-menu item-carrinho" href="carrinho.html"><i class="bi bi-cart3"></i> Carrinho
+                    <span id="cartBadge" class="badge bg-light text-dark">0</span></a>
             </nav>
         </div>
     </header>
@@ -35,97 +37,178 @@
         <div class="titulo-secao text-center mb-5">
             <span class="subtitulo">Estoque atualizado</span>
             <h1>Compre os melhores itens para irrigação</h1>
-            <p class="text-muted mx-auto" style="max-width: 720px;">Selecione peças com estoque disponível, veja
-                características técnicas e adicione ao carrinho com animações suaves.</p>
+            <p class="text-muted mx-auto" style="max-width: 720px">
+                Selecione peças com estoque disponível, veja características técnicas
+                e adicione ao carrinho com animações suaves.
+            </p>
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-6 col-xl-4">
-                <article class="produto rounded-4 p-4 shadow-sm animate-fade">
-                    <div class="col-md-6 col-xl-4">
-                        <article class="produto rounded-4 p-4 shadow-sm animate-fade">
-                            <div class="icone-produto bg-light rounded-circle mb-3"><i
-                                    class="bi bi-droplet-fill text-success"></i></div>
-                            <h2 class="h5">Gotejador regulável</h2>
-                            <p class="text-muted">Controle preciso de vazão para hortas e jardins.</p>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <span class="preco-produto">R$ 9,90</span>
-                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="GD01"
-                                    data-name="Gotejador regulável" data-price="9.90">Adicionar</button>
-                            </div>
-                        </article>
+        <div class="row g-4" id="produtosContainer">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade" data-id="GD01"
+                    data-name="Gotejador regulável" data-price="0" data-description="O Valley Bender é um complemento opcional
+para pivôs centrais, que aumenta seus
+hectares irrigados dobrando a máquina em
+torno de obstáculos como: árvores, casas,
+cercas, entre outros. Assim, a área irrigada
+deixa de ser apenas circular e adquire
+formato personalizado para o produtor rural." data-image="IMG/bender.jpeg" data-under-review="true">
+                    <div class="icone-produto bg-light rounded-circle mb-3">
+                        <i class="bi bi-droplet-fill text-success"></i>
                     </div>
-                    <div class="col-md-6 col-xl-4">
-                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-1">
-                            <div class="icone-produto bg-light rounded-circle mb-3"><i
-                                    class="bi bi-filter-square text-success"></i>
-                            </div>
-                            <h2 class="h5">Filtro de disco</h2>
-                            <p class="text-muted">Proteção para sistemas de irrigação contra partículas e sujeira.</p>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <span class="preco-produto">R$ 79,90</span>
-                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="FD02"
-                                    data-name="Filtro de disco" data-price="79.90">Adicionar</button>
-                            </div>
-                        </article>
+                    <h2 class="h5">Bender</h2>
+                    <p class="text-muted">
+                        O Valley Bender é um complemento opcional que permite ao pivô
+                        contornar obstáculos e irrigar além da área circular tradicional.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between mt-3">
+                        <span class="preco-produto">Valor sob consulta</span>
                     </div>
-                    <div class="col-md-6 col-xl-4">
-                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-2">
-                            <div class="icone-produto bg-light rounded-circle mb-3"><i
-                                    class="bi bi-wind text-success"></i></div>
-                            <h2 class="h5">Microaspersor em L</h2>
-                            <p class="text-muted">Cobertura ampla e uniforme para canteiros e jardins.</p>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <span class="preco-produto">R$ 18,50</span>
-                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="MA03"
-                                    data-name="Microaspersor em L" data-price="18.50">Adicionar</button>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-3">
-                            <div class="icone-produto bg-light rounded-circle mb-3"><i
-                                    class="bi bi-plug-fill text-success"></i>
-                            </div>
-                            <h2 class="h5">IrrigaMágico</h2>
-                            <p class="text-muted">Dispositivo de irrigação automática para jardins e hortas.</p>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <span class="preco-produto">R$ 12,90</span>
-                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="AR04"
-                                    data-name="IrrigaMágico" data-price="12.90">Adicionar</button>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-4">
-                            <div class="icone-produto bg-light rounded-circle mb-3"><i
-                                    class="bi bi-gear-fill text-success"></i>
-                            </div>
-                            <h2 class="h5">Válvula de esfera</h2>
-                            <p class="text-muted">Fechamento fácil e rápido para seções de irrigação.</p>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <span class="preco-produto">R$ 34,90</span>
-                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="VE05"
-                                    data-name="Válvula de esfera" data-price="34.90">Adicionar</button>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-5">
-                            <div class="icone-produto bg-light rounded-circle mb-3"><i
-                                    class="bi bi-droplet-half text-success"></i>
-                            </div>
-                            <h2 class="h5">Mangueira reforçada</h2>
-                            <p class="text-muted">Combina flexibilidade e resistência em uma só peça.</p>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <span class="preco-produto">R$ 22,00</span>
-                                <button class="btn btn-outline-success btn-sm" data-cart-add data-id="MR06"
-                                    data-name="Mangueira reforçada" data-price="22.00">Adicionar</button>
-                            </div>
-                        </article>
-                    </div>
+                </article>
             </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-1" data-id="FD02"
+                    data-name="Estação Metereológica Doméstica" data-price="1500.00" data-description="Capaz de mensurar as condições climáticas da fazenda, por meio de dados de temperatura, umidade relativa do ar, radiação solar, velocidade e direção do vento, volume de chuvas e previsão dos próximos dias, também gerenciada via software Valley Scheduling.
+
+- Velocidade e direção do vento
+- Chuva
+- Radiação Solar Global
+- Temperatura
+- Pressão barométrica
+- Umidade relativa do ar" data-image="IMG/estacao.jpeg">
+                    <div class="icone-produto bg-light rounded-circle mb-3">
+                        <i class="bi bi-cloud-drizzle-fill text-success"></i>
+                    </div>
+                    <h2 class="h5">Estação Metereológica Doméstica</h2>
+                    <p class="text-muted">
+                        Monitora as condições climáticas da fazenda em tempo real com
+                        integração ao Valley Scheduling.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between mt-3">
+                        <span class="preco-produto">R$ 1.500,00</span>
+                        <button class="btn btn-outline-success btn-sm" data-cart-add data-id="FD02"
+                            data-name="Estação Metereológica Doméstica" data-price="1500.00">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-2" data-id="MA03"
+                    data-name="Pivô Linear" data-price="0" data-description="Os Lineares se deslocam para frente e
+para trás em seu campo, em vez de em
+torno de uma torre central. Sendo
+possível atuarem de maneira standard,
+rebocável ou giratória." data-image="IMG/lineares.jpeg" data-under-review="true">
+                    <div class="icone-produto bg-light rounded-circle mb-3">
+                        <i class="bi bi-water text-success"></i>
+                    </div>
+                    <h2 class="h5">Pivô Linear</h2>
+                    <p class="text-muted">
+                        Os lineares percorrem o campo em linha reta, podendo ser fixos,
+                        rebocáveis ou giratórios.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between mt-3">
+                        <span class="preco-produto">Valor sob consulta</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-3" data-id="AR04"
+                    data-name="IrrigaMágico" data-price="499.99"
+                    data-description="O IrrigaMágico é um dispositivo de irrigação automática que permite ao produtor programar dias e horários de irrigação de forma simples e prática, sem necessidade de intervenção manual. Com ele, a lavoura recebe água no momento certo, garantindo maior eficiência no uso dos recursos hídricos e reduzindo a dependência de mão de obra. Ideal para quem busca praticidade e consistência no manejo da irrigação."
+                    data-image="IMG/irriga.png">
+                    <div class="icone-produto bg-light rounded-circle mb-3">
+                        <i class="bi bi-plug-fill text-success"></i>
+                    </div>
+                    <h2 class="h5">IrrigaMágico</h2>
+                    <p class="text-muted">
+                        Irrigação automática programável por horário e dia, sem
+                        necessidade de intervenção manual.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between mt-3">
+                        <span class="preco-produto">R$ 499,99</span>
+                        <button class="btn btn-outline-success btn-sm" data-cart-add data-id="AR04"
+                            data-name="IrrigaMágico" data-price="499.99">
+                            Adicionar
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-4" data-id="VE05"
+                    data-name="Pivô 5 Polegadas" data-price="0" data-description="O Valley 5 polegadas é uma solução de
+baixo custo, ideal para produtores que
+pretendem irrigar com pivô central uma
+área de até 40 hectares. Esse tipo de
+pivô compartilha o mesmo design e
+desempenho de alta qualidade que os
+demais produtos Valley." data-image="IMG/polegada.jpeg" data-under-review="true">
+                    <div class="icone-produto bg-light rounded-circle mb-3">
+                        <i class="bi bi-gear-fill text-success"></i>
+                    </div>
+                    <h2 class="h5">Pivô 5 Polegadas</h2>
+                    <p class="text-muted">
+                        Pivô central de baixo custo para áreas de até 40 hectares, com o
+                        mesmo padrão de qualidade Valley.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between mt-3">
+                        <span class="preco-produto">Valor sob consulta</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-5" data-id="MR06"
+                    data-name="Pivô Spinner" data-price="0" data-description="O Valley Spinner é ideal para os pequenos
+produtores com acesso limitado à
+eletricidade. Quando suas condições de
+campo exigem o melhor, mas a
+infraestrutura não permite o serviço
+elétrico, escolha o Valley Spinner." data-image="IMG/spinner.jpeg" data-under-review="true">
+                    <div class="icone-produto bg-light rounded-circle mb-3">
+                        <i class="bi bi-arrow-repeat text-success"></i>
+                    </div>
+                    <h2 class="h5">Pivô Spinner</h2>
+                    <p class="text-muted">
+                        Solução para pequenos produtores sem acesso à eletricidade, ideal
+                        para campos com infraestrutura limitada.
+                    </p>
+                    <div class="d-flex align-items-center justify-content-between mt-3">
+                        <span class="preco-produto">Valor sob consulta</span>
+                    </div>
+                </article>
+            </div>
+        </div>
     </main>
+
+    <div id="produtoModal" class="modal-overlay">
+        <div class="modal-content rounded-4">
+            <button class="modal-close" id="modalCloseBtn">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container mb-4">
+                    <img id="modalImage" src="" alt="Produto" class="modal-product-image" />
+                </div>
+                <h2 id="modalTitle" class="h4 mb-3">Nome do Produto</h2>
+                <p id="modalDescription" class="text-muted mb-4">
+                    Descrição do produto
+                </p>
+                <div class="d-flex align-items-center gap-3 mb-5">
+                    <span id="modalPrice" class="preco-modal">R$ 0,00</span>
+                </div>
+                <button id="modalAddToCart" class="btn btn-success w-100" data-id="" data-name="" data-price="">
+                    <i class="bi bi-cart-plus"></i> Adicionar ao carrinho
+                </button>
+                <a id="modalBudget" href="contato.html" class="btn btn-primary w-100 d-none">
+                    <i class="bi bi-envelope-check"></i> Realizar orçamento
+                </a>
+            </div>
+        </div>
+    </div>
 
     <footer class="site-footer py-4">
         <div class="container text-center">
@@ -136,6 +219,91 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/cart.js"></script>
+
+    <script>
+        // MODAL DE PRODUTO
+        const produtoModal = document.getElementById("produtoModal");
+        const modalCloseBtn = document.getElementById("modalCloseBtn");
+        const modalAddToCartBtn = document.getElementById("modalAddToCart");
+        const produtosContainer = document.getElementById("produtosContainer");
+
+        // Função para abrir o modal
+        function abrirModal(produto) {
+            document.getElementById("modalTitle").textContent =
+                produto.dataset.name;
+            document.getElementById("modalDescription").textContent =
+                produto.dataset.description;
+            document.getElementById("modalPrice").textContent =
+                "R$ " +
+                parseFloat(produto.dataset.price).toFixed(2).replace(".", ",");
+            document.getElementById("modalImage").src = produto.dataset.image;
+            document.getElementById("modalImage").alt = produto.dataset.name;
+
+            const isUnderReview = produto.dataset.underReview === "true";
+            const modalBudget = document.getElementById("modalBudget");
+
+            if (isUnderReview) {
+                // Produto sob consulta - mostrar botão de orçamento
+                modalAddToCartBtn.classList.add("d-none");
+                modalBudget.classList.remove("d-none");
+                document.getElementById("modalPrice").textContent =
+                    "Valor sob consulta";
+            } else {
+                // Produto com preço - mostrar botão de carrinho
+                modalAddToCartBtn.classList.remove("d-none");
+                modalBudget.classList.add("d-none");
+
+                // Atualizar o botão "Adicionar ao Carrinho" com os dados do produto
+                modalAddToCartBtn.dataset.id = produto.dataset.id;
+                modalAddToCartBtn.dataset.name = produto.dataset.name;
+                modalAddToCartBtn.dataset.price = produto.dataset.price;
+            }
+
+            produtoModal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            produtoModal.classList.remove("active");
+            document.body.style.overflow = "auto";
+        }
+
+        // Fechar ao clicar no botão X
+        modalCloseBtn.addEventListener("click", fecharModal);
+
+        // Fechar ao clicar no overlay (fundo escuro)
+        produtoModal.addEventListener("click", (e) => {
+            if (e.target === produtoModal) {
+                fecharModal();
+            }
+        });
+
+        // Fechar ao pressionar ESC
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && produtoModal.classList.contains("active")) {
+                fecharModal();
+            }
+        });
+
+        // Adicionar ao carrinho a partir do modal
+        modalAddToCartBtn.addEventListener("click", () => {
+            addToCart({
+                id: modalAddToCartBtn.dataset.id,
+                name: modalAddToCartBtn.dataset.name,
+                price: Number(modalAddToCartBtn.dataset.price),
+            });
+            fecharModal();
+        });
+
+        // Abrir modal ao clicar em um produto
+        produtosContainer.addEventListener("click", (e) => {
+            const article = e.target.closest("article.produto");
+            if (article && !e.target.closest("[data-cart-add]")) {
+                abrirModal(article);
+            }
+        });
+    </script>
 </body>
 
 </html>
