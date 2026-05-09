@@ -48,7 +48,7 @@
     
     .btn-success:hover, .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 16px #00000026;
     }
     
     .btn-outline-danger:hover {
@@ -61,7 +61,7 @@
         margin-top: 2rem;
       }
     }
-    
+
     @media (max-width: 768px) {
       .table {
         font-size: 0.9rem;
@@ -86,6 +86,119 @@
       
       .cart-summary h3 {
         font-size: 1.1rem;
+      }
+
+      .cart-table table thead th {
+        padding: 0.85rem 0.65rem !important;
+        font-size: 0.9rem;
+      }
+
+      .cart-table table tbody td {
+        padding: 0.85rem 0.65rem !important;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .table {
+        font-size: 0.8rem;
+      }
+
+      th, td {
+        padding: 0.6rem 0.5rem !important;
+      }
+
+      .btn-sm {
+        padding: 0.3rem 0.45rem;
+        font-size: 0.7rem;
+      }
+
+      .cart-summary {
+        padding: 1.25rem;
+      }
+
+      .cart-summary h3 {
+        font-size: 1rem;
+      }
+
+      .cart-summary p {
+        font-size: 0.9rem;
+      }
+
+      .cart-empty {
+        padding: 2rem 1rem;
+      }
+
+      .cart-empty i {
+        font-size: 2.5rem;
+      }
+
+      .cart-empty h2 {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+      }
+
+      .cart-empty p {
+        font-size: 0.9rem;
+      }
+
+      .cart-table table thead th {
+        padding: 0.6rem 0.45rem !important;
+        font-size: 0.75rem;
+      }
+
+      .cart-table table tbody td {
+        padding: 0.6rem 0.45rem !important;
+        font-size: 0.8rem;
+      }
+
+      .cart-table {
+        border-radius: 12px;
+      }
+
+      .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.9rem;
+      }
+
+      .btn-lg {
+        padding: 0.6rem 1.2rem !important;
+        font-size: 0.9rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .table {
+        font-size: 0.75rem;
+      }
+
+      th, td {
+        padding: 0.5rem 0.35rem !important;
+      }
+
+      .btn-sm {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.65rem;
+      }
+
+      .cart-summary {
+        padding: 1rem;
+      }
+
+      .cart-summary h3 {
+        font-size: 0.95rem;
+      }
+
+      .cart-empty {
+        padding: 1.5rem 0.75rem;
+      }
+
+      .cart-empty i {
+        font-size: 2rem;
+      }
+
+      .cart-table {
+        border-radius: 10px;
       }
     }
   </style>

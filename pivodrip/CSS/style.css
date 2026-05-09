@@ -9,11 +9,13 @@
   --gray-medium: #5f6c6b;
   --gray-light: #d4d8d5;
   --surface: #f3f5f3;
-  --shadow: 0 22px 50px rgba(17, 28, 35, 0.12);
+  --shadow: 0 22px 50px #111c231f;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -22,6 +24,9 @@ body {
   background: #d4d8d5 url('../IMG/modelo8120.jpeg') center/cover fixed;
   color: var(--gray-dark);
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
 }
 
 body::before {
@@ -37,7 +42,7 @@ body::before {
   left: 50%;
   bottom: 2.5rem;
   transform: translateX(-50%) translateY(20px);
-  background: rgba(20, 56, 31, 0.95);
+  background: #14381ff2;
   color: #f3f5f3;
   padding: 0.95rem 1.35rem;
   border-radius: 999px;
@@ -54,7 +59,7 @@ body::before {
 .cabecalho {
   background: var(--pivo-green);
   color: #f3f5f3;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #00000014;
 }
 
 .marca {
@@ -86,6 +91,11 @@ body::before {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.25s ease;
+  padding: 0.5rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-radius: 6px;
 }
 
 .item-menu:hover,
@@ -97,17 +107,20 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
 }
 
 .inicio {
-  background: linear-gradient(135deg, rgba(20, 72, 38, 0.98), rgba(43, 63, 58, 0.96));
+  background: linear-gradient(135deg, #144826fa, #2b3f3af5);
   color: #fff;
 }
 
 .destaque-inicial {
   position: relative;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #ffffff0f;
+  border: 1px solid #ffffff1f;
   overflow: hidden;
 }
 
@@ -115,7 +128,7 @@ body::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 30%);
+  background: radial-gradient(circle at top right, #ffffff2e, transparent 30%);
   pointer-events: none;
 }
 
@@ -195,7 +208,7 @@ body::before {
 .painel-informacao,
 .caixa-citacao,
 .caixa-info {
-  border: 1px solid rgba(47, 59, 58, 0.08);
+  border: 1px solid #2f3b3a14;
 }
 
 .icone-destaque,
@@ -209,7 +222,7 @@ body::before {
   width: 54px;
   height: 54px;
   border-radius: 18px;
-  background: rgba(20, 72, 38, 0.12);
+  background: #1448261f;
   color: var(--pivo-green);
   font-size: 1.5rem;
 }
@@ -264,8 +277,8 @@ body::before {
   border-radius: 18px;
   padding: 1rem 1.25rem;
   margin-bottom: 1rem;
-  border: 1px solid rgba(20, 72, 38, 0.12);
-  box-shadow: 0 12px 28px rgba(20, 72, 38, 0.05);
+  border: 1px solid #1448261f;
+  box-shadow: 0 12px 28px #1448260c;
 }
 
 .assist-list li strong {
@@ -309,7 +322,7 @@ button.btn-primary:hover {
 }
 
 .btn-ghost {
-  background: rgba(255, 255, 255, 0.95);
+  background: #fffffff2;
   color: var(--pivo-green);
   border: 1px solid var(--pivo-green);
 }
@@ -324,7 +337,7 @@ button.btn-primary:hover {
 .btn-outline-primary {
   color: var(--pivo-green);
   border-color: var(--pivo-green);
-  background: rgba(255, 255, 255, 0.95);
+  background: #fffffff2;
 }
 
 .cabecalho .item-menu.active,
@@ -409,7 +422,7 @@ button.btn-primary:hover {
 .resumo-carrinho {
   background: #eef4ec;
   border-radius: 24px;
-  border: 1px solid rgba(20, 72, 38, 0.14);
+  border: 1px solid #14482624;
   padding: 1.75rem;
 }
 
@@ -417,7 +430,7 @@ button.btn-primary:hover {
   background: #fff;
   padding: 3rem;
   border-radius: 24px;
-  border: 1px dashed rgba(20, 72, 38, 0.4);
+  border: 1px dashed #14482666;
   text-align: center;
 }
 
@@ -429,7 +442,7 @@ button.btn-primary:hover {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: #00000080;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,7 +466,7 @@ button.btn-primary:hover {
   max-height: 90vh;
   overflow-y: auto;
   animation: slideUp 0.3s ease;
-  border: 1px solid rgba(47, 59, 58, 0.08);
+  border: 1px solid #2f3b3a14;
   box-shadow: var(--shadow);
 }
 
@@ -500,7 +513,7 @@ button.btn-primary:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(20, 72, 38, 0.08);
+  background: #14482614;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -520,7 +533,7 @@ button.btn-primary:hover {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  background: rgba(20, 72, 38, 0.12) !important;
+  background: #1448261f !important;
 }
 
 #modalTitle {
@@ -569,12 +582,12 @@ button.btn-primary:hover {
   text-decoration: none;
 }
 
-/* ESTILOS DO CARRINHO */
+/*estilo carrinho*/
 .cart-empty {
   background: #fff;
   padding: 3rem;
   border-radius: 24px;
-  border: 1px dashed rgba(20, 72, 38, 0.4);
+  border: 1px dashed #14482666;
   text-align: center;
 }
 
@@ -587,7 +600,7 @@ button.btn-primary:hover {
   background: #fff;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px #00000014;
 }
 
 .cart-table table {
@@ -596,7 +609,7 @@ button.btn-primary:hover {
 
 .cart-table table thead {
   background: #f5f5f5;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #00000014;
 }
 
 .cart-table table thead th {
@@ -608,7 +621,7 @@ button.btn-primary:hover {
 
 .cart-table table tbody td {
   padding: 1.25rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #00000014;
   vertical-align: middle;
 }
 
@@ -619,9 +632,9 @@ button.btn-primary:hover {
 .cart-summary {
   background: var(--surface);
   border-radius: 24px;
-  border: 1px solid rgba(47, 59, 58, 0.08);
+  border: 1px solid #2f3b3a14;
   padding: 2.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px #00000014;
 }
 
 .cart-summary h3 {
@@ -650,7 +663,7 @@ button.btn-primary:hover {
   }
 }
 
-/* ANIMAÇÕES E INTERAÇÕES MELHORADAS */
+/*animação interação*/
 .produto {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -664,7 +677,7 @@ button.btn-primary:hover {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgba(20, 72, 38, 0.08);
+  background: #14482614;
   transition: left 0.4s ease;
   z-index: 0;
   pointer-events: none;
@@ -676,10 +689,10 @@ button.btn-primary:hover {
 
 .produto:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 16px 32px rgba(20, 72, 38, 0.2);
+  box-shadow: 0 16px 32px #14482633;
 }
 
-/* Animação de entrada dos produtos */
+/*animação fadein*/
 .animate-fade {
   animation: fadeInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
@@ -695,14 +708,14 @@ button.btn-primary:hover {
   }
 }
 
-/* Animações de delay sucessivas */
+/*delay qnd a página carrega*/
 .delay-1 { animation-delay: 0.12s; }
 .delay-2 { animation-delay: 0.24s; }
 .delay-3 { animation-delay: 0.36s; }
 .delay-4 { animation-delay: 0.48s; }
 .delay-5 { animation-delay: 0.60s; }
 
-/* Animação do modal */
+/*animação fadein e ease out*/
 .modal-overlay.active {
   animation: fadeIn 0.3s ease-out;
 }
@@ -716,11 +729,17 @@ button.btn-primary:hover {
   }
 }
 
-/* Botões com efeito ripple */
+/*animação botão ripple*/
 .btn {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .btn::after {
@@ -731,7 +750,7 @@ button.btn-primary:hover {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  background: #14482666;
   transform: translate(-50%, -50%);
   transition: width 0.6s, height 0.6s;
 }
@@ -741,16 +760,26 @@ button.btn-primary:hover {
   height: 300px;
 }
 
+.btn:focus,
+.btn-primary:focus,
+.btn-success:focus,
+.btn-outline-primary:focus,
+.btn-outline-success:focus,
+.btn-outline-danger:focus {
+  box-shadow: 0 0 0 0.25rem #14482640;
+  outline: none;
+}
+
 .btn-success:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(20, 72, 38, 0.3);
+  box-shadow: 0 8px 20px #1448264D;
 }
 
 .btn-outline-success:hover {
   transform: translateY(-2px);
 }
 
-/* Ícone do carrinho com pulso */
+/*animação carrinho hover*/
 .item-carrinho {
   transition: transform 0.3s ease;
 }
@@ -759,64 +788,152 @@ button.btn-primary:hover {
   transform: scale(1.1);
 }
 
-/* Responsividade móvel melhorada */
-@media (max-width: 768px) {
-  .produto {
-    padding: 1.25rem !important;
+/*responsividade mobile*/
+@media (max-width: 991px) {
+  .destaque-inicial {
+    padding: 2rem !important;
   }
 
-  .produto h2 {
+  .destaque-inicial h1 {
+    font-size: 2rem;
+  }
+
+  .texto-destaque {
+    font-size: 0.95rem;
+  }
+
+  .grupo-botoes .btn {
+    min-width: 150px;
+    font-size: 0.95rem;
+  }
+}
+
+/*responsividade mobile resolução média*/
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+
+  .cabecalho {
+    padding: 0.75rem 0 !important;
+  }
+
+  .marca {
+    font-size: 1.25rem;
+  }
+
+  .marca-secundaria {
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+  }
+
+  .item-menu {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .item-menu.item-carrinho {
+    font-size: 0.8rem;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .inicio {
+    padding: 3rem 1rem !important;
+  }
+
+  .destaque-inicial {
+    padding: 1.75rem !important;
+  }
+
+  .destaque-inicial h1 {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+
+  .texto-destaque {
+    font-size: 0.9rem;
+  }
+
+  .grupo-botoes {
+    flex-direction: column !important;
+  }
+
+  .grupo-botoes .btn {
+    min-width: 100%;
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem !important;
+  }
+
+  .titulo-secao h1 {
+    font-size: 1.5rem;
+  }
+
+  .titulo-secao h2 {
+    font-size: 1.35rem;
+  }
+
+  .titulo-secao h3 {
     font-size: 1.1rem;
   }
 
+  .subtitulo {
+    font-size: 0.65rem;
+  }
+
+  .produto {
+    padding: 1.25rem !important;
+    border-radius: 16px !important;
+  }
+
+  .produto h2 {
+    font-size: 1rem;
+  }
+
   .produto p {
+    font-size: 0.9rem;
+  }
+
+  .icone-produto {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .preco-produto {
     font-size: 0.95rem;
   }
 
   .btn-outline-success.btn-sm {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.85rem;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.8rem;
   }
 
-  .preco-produto {
-    font-size: 1rem;
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
   }
 
-  .titulo-secao h1 {
-    font-size: 1.75rem;
-  }
-
-  .cabecalho {
-    padding: 1rem 0 !important;
-  }
-
-  .menu {
-    gap: 0.5rem;
-  }
-
-  .item-menu {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .row.g-4 {
-    gap: 1rem !important;
-  }
-
-  .produto {
-    padding: 1rem !important;
-    border-radius: 16px !important;
-  }
-
-  .modal-content {
-    padding: 1.5rem;
-    width: 95vw;
+  .btn-lg {
+    padding: 0.7rem 1.5rem !important;
+    font-size: 0.95rem !important;
   }
 
   .btn-sm {
@@ -824,8 +941,419 @@ button.btn-primary:hover {
     font-size: 0.75rem;
   }
 
+  .docol-lg-6,
+  .col-lg-5 {
+    margin-bottom: 1.5rem;
+  }
+
+  .row.gap-4 {
+    gap: 1rem !important;
+  }
+
+  .cartao-suporte,
+  .servico {
+    min-height: auto;
+    padding: 1.5rem !important;
+  }
+
+  .icone-destaque {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+  }
+
+  .modal-content {
+    padding: 1.75rem;
+    max-width: 90vw;
+  }
+
+  .modal-image-container {
+    height: 220px;
+  }
+
+  .painel-informacao,
+  .formulario-contato,
+  .formulario-assistencia,
+  .caixa-citacao {
+    padding: 1.5rem !important;
+  }
+
+  .painel-informacao h2,
+  .formulario-contato h2,
+  .caixa-citacao h3 {
+    font-size: 1.2rem;
+  }
+
+  .detail-item {
+    gap: 0.75rem;
+  }
+
+  .detail-item i {
+    font-size: 1.25rem;
+  }
+
+  .assist-list li {
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+
   .d-flex.align-items-center.justify-content-between {
     flex-wrap: wrap;
     gap: 0.5rem;
+  }
+
+  .site-footer {
+    padding: 1.5rem 0 !important;
+    font-size: 0.9rem;
+  }
+}
+
+/*responsividade mobile resolução pequena*/
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .cabecalho {
+    padding: 0.6rem 0 !important;
+  }
+
+  .marca {
+    font-size: 1.1rem;
+  }
+
+  .lead {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+
+  .menu {
+    gap: 0.3rem;
+  }
+
+  .item-menu {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .inicio {
+    padding: 2rem 0.75rem !important;
+  }
+
+  .destaque-inicial {
+    padding: 1.5rem !important;
+    border-radius: 16px;
+  }
+
+  .destaque-inicial h1 {
+    font-size: 1.4rem;
+    margin: 0.75rem 0;
+  }
+
+  .texto-destaque {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .grupo-botoes {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  .grupo-botoes .btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem !important;
+    min-width: 100% !important;
+  }
+
+  .titulo-secao h1 {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .titulo-secao h2 {
+    font-size: 1.2rem;
+  }
+
+  .titulo-secao h3 {
+    font-size: 1rem;
+  }
+
+  .subtitulo {
+    font-size: 0.6rem;
+  }
+
+  .row.g-4 {
+    gap: 0.75rem !important;
+  }
+
+  .col-12,
+  .col-sm-6,
+  .col-lg-4,
+  .col-md-4,
+  .col-lg-6,
+  .col-lg-5 {
+    padding: 0.375rem;
+  }
+
+  .produto {
+    padding: 1rem !important;
+    border-radius: 12px !important;
+  }
+
+  .produto h2 {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+  }
+
+  .produto p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .icone-produto {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .preco-produto {
+    font-size: 0.9rem;
+  }
+
+  .btn-outline-success.btn-sm {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.55rem 1rem;
+  }
+
+  .btn-lg {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .btn-sm {
+    padding: 0.3rem 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  .cartao-suporte,
+  .servico {
+    min-height: auto;
+    padding: 1.25rem !important;
+  }
+
+  .icone-destaque {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .modal-content {
+    padding: 1.25rem;
+    max-width: 95vw;
+    width: 95vw;
+  }
+
+  .modal-image-container {
+    height: 180px;
+  }
+
+  .preco-modal {
+    font-size: 1.2rem;
+  }
+
+  .painel-informacao,
+  .formulario-contato,
+  .formulario-assistencia,
+  .caixa-citacao,
+  .caixa-info {
+    padding: 1.25rem !important;
+    border-radius: 12px;
+  }
+
+  .painel-informacao h2,
+  .formulario-contato h2,
+  .formulario-assistencia h3,
+  .caixa-citacao h3,
+  .caixa-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .painel-informacao p,
+  .formulario-contato p,
+  .formulario-assistencia p,
+  .caixa-citacao p,
+  .caixa-info p {
+    font-size: 0.9rem;
+  }
+
+  .detail-item {
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .detail-item i {
+    font-size: 1.2rem;
+  }
+
+  .detail-item h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+  }
+
+  .assist-list li {
+    padding: 0.75rem 0.9rem;
+    margin-bottom: 0.65rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+
+  .assist-list li strong {
+    margin-right: 0.5rem;
+  }
+
+  .site-footer {
+    padding: 1.25rem 0 !important;
+    font-size: 0.85rem;
+  }
+
+  .site-footer p {
+    margin-bottom: 0.35rem !important;
+  }
+}
+
+/*responsividade mobile resolução antiga*/
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+
+  .cabecalho .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .marca {
+    font-size: 1rem;
+  }
+
+  .lead {
+    font-size: 0.8rem;
+  }
+
+  .menu {
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  .item-menu {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .badge {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.3rem;
+  }
+
+  .inicio {
+    padding: 1.5rem 0.5rem !important;
+  }
+
+  .destaque-inicial {
+    padding: 1.25rem !important;
+  }
+
+  .destaque-inicial h1 {
+    font-size: 1.2rem;
+    margin: 0.6rem 0;
+  }
+
+  .texto-destaque {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .grupo-botoes .btn {
+    font-size: 0.8rem;
+    padding: 0.55rem 0.9rem !important;
+  }
+
+  .titulo-secao h1 {
+    font-size: 1.2rem;
+  }
+
+  .titulo-secao h2 {
+    font-size: 1.1rem;
+  }
+
+  .produto {
+    padding: 0.9rem !important;
+  }
+
+  .produto h2 {
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+  }
+
+  .produto p {
+    font-size: 0.8rem;
+  }
+
+  .preco-produto {
+    font-size: 0.85rem;
+  }
+
+  .btn-outline-success.btn-sm {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .cartao-suporte {
+    padding: 1.1rem !important;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-image-container {
+    height: 150px;
+  }
+
+  .form-control {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .site-footer {
+    padding: 1rem 0 !important;
   }
 }
