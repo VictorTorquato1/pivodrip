@@ -19,7 +19,7 @@
             <div>
                 <a class="marca" href="index.html">Pivodrip <span class="marca-secundaria">Valley</span></a>
                 <p class="lead mb-0">
-                    Peças de irrigação com cores e qualidade Valley.
+                    Peças para irrigação com qualidade Valley e Netafim.
                 </p>
             </div>
             <nav class="menu">
@@ -45,8 +45,8 @@
 
         <div class="row g-4" id="produtosContainer">
             <div class="col-12 col-sm-6 col-lg-4">
-                <article class="produto rounded-4 p-4 shadow-sm animate-fade" data-id="GD01"
-                    data-name="Bender" data-price="0" data-description="O Valley Bender é um complemento opcional
+                <article class="produto rounded-4 p-4 shadow-sm animate-fade" data-id="GD01" data-name="Bender"
+                    data-price="0" data-description="O Valley Bender é um complemento opcional
 para pivôs centrais, que aumenta seus
 hectares irrigados dobrando a máquina em
 torno de obstáculos como: árvores, casas,
@@ -69,7 +69,7 @@ formato personalizado para o produtor rural." data-image="IMG/bender.jpeg" data-
 
             <div class="col-12 col-sm-6 col-lg-4">
                 <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-1" data-id="FD02"
-                    data-name="Estação Metereológica Doméstica" data-price="1500.00" data-description="Capaz de mensurar as condições climáticas da fazenda, por meio de dados de temperatura, umidade relativa do ar, radiação solar, velocidade e direção do vento, volume de chuvas e previsão dos próximos dias, também gerenciada via software Valley Scheduling.
+                    data-name="Estação Metereológica Doméstica" data-price="25000.00" data-description="Capaz de mensurar as condições climáticas da fazenda, por meio de dados de temperatura, umidade relativa do ar, radiação solar, velocidade e direção do vento, volume de chuvas e previsão dos próximos dias, também gerenciada via software Valley Scheduling.
 
 - Velocidade e direção do vento
 - Chuva
@@ -86,9 +86,9 @@ formato personalizado para o produtor rural." data-image="IMG/bender.jpeg" data-
                         integração ao Valley Scheduling.
                     </p>
                     <div class="d-flex align-items-center justify-content-between mt-3">
-                        <span class="preco-produto">R$ 1.500,00</span>
+                        <span class="preco-produto">R$ 25.000,00</span>
                         <button class="btn btn-outline-success btn-sm" data-cart-add data-id="FD02"
-                            data-name="Estação Metereológica Doméstica" data-price="1500.00">
+                            data-name="Estação Metereológica Doméstica" data-price="25000.00">
                             Adicionar
                         </button>
                     </div>
@@ -97,15 +97,15 @@ formato personalizado para o produtor rural." data-image="IMG/bender.jpeg" data-
 
             <div class="col-12 col-sm-6 col-lg-4">
                 <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-2" data-id="MA03"
-                    data-name="Pivô Linear" data-price="0" data-description="Os Lineares se deslocam para frente e
-para trás em seu campo, em vez de em
+                    data-name="Pivot Linear" data-price="0" data-description="Os Lineares se deslocam para frente e
+para trás em seu field, em vez de em
 torno de uma torre central. Sendo
 possível atuarem de maneira standard,
 rebocável ou giratória." data-image="IMG/lineares.jpeg" data-under-review="true">
                     <div class="icone-produto bg-light rounded-circle mb-3">
                         <i class="bi bi-water text-success"></i>
                     </div>
-                    <h2 class="h5">Pivô Linear</h2>
+                    <h2 class="h5">Pivot Linear</h2>
                     <p class="text-muted">
                         Os lineares percorrem o campo em linha reta, podendo ser fixos,
                         rebocáveis ou giratórios.
@@ -151,9 +151,9 @@ demais produtos Valley." data-image="IMG/polegada.jpeg" data-under-review="true"
                     <div class="icone-produto bg-light rounded-circle mb-3">
                         <i class="bi bi-gear-fill text-success"></i>
                     </div>
-                    <h2 class="h5">Pivô 5 Polegadas</h2>
+                    <h2 class="h5">Pivot 5 Polegadas</h2>
                     <p class="text-muted">
-                        Pivô central de baixo custo para áreas de até 40 hectares, com o
+                        Pivot central de baixo custo para áreas de até 40 hectares, com o
                         mesmo padrão de qualidade Valley.
                     </p>
                     <div class="d-flex align-items-center justify-content-between mt-3">
@@ -164,7 +164,7 @@ demais produtos Valley." data-image="IMG/polegada.jpeg" data-under-review="true"
 
             <div class="col-12 col-sm-6 col-lg-4">
                 <article class="produto rounded-4 p-4 shadow-sm animate-fade delay-5" data-id="MR06"
-                    data-name="Pivô Spinner" data-price="0" data-description="O Valley Spinner é ideal para os pequenos
+                    data-name="Pivot Spinner" data-price="0" data-description="O Valley Spinner é ideal para os pequenos
 produtores com acesso limitado à
 eletricidade. Quando suas condições de
 campo exigem o melhor, mas a
@@ -173,7 +173,7 @@ elétrico, escolha o Valley Spinner." data-image="IMG/spinner.jpeg" data-under-r
                     <div class="icone-produto bg-light rounded-circle mb-3">
                         <i class="bi bi-arrow-repeat text-success"></i>
                     </div>
-                    <h2 class="h5">Pivô Spinner</h2>
+                    <h2 class="h5">Pivot Spinner</h2>
                     <p class="text-muted">
                         Solução para pequenos produtores sem acesso à eletricidade, ideal
                         para campos com infraestrutura limitada.
@@ -261,6 +261,13 @@ elétrico, escolha o Valley Spinner." data-image="IMG/spinner.jpeg" data-under-r
 
             produtoModal.classList.add("active");
             document.body.style.overflow = "hidden";
+            // Trigger animation
+            setTimeout(() => {
+                document.querySelector(".modal-content").style.animation = "none";
+                setTimeout(() => {
+                    document.querySelector(".modal-content").style.animation = "";
+                }, 10);
+            }, 10);
         }
 
         // Função para fechar o modal

@@ -1,8 +1,11 @@
 const CART_KEY = 'pivodripCart';
 const cart = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
 
+console.log('🛒 Cart.js loaded. Current cart:', cart);
+
 function saveCart() {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  console.log('💾 Cart saved:', cart);
 }
 
 function updateCartBadge() {
@@ -56,11 +59,17 @@ function formatCurrency(value) {
 
 function renderCart() {
   const cartContent = document.getElementById('cartContent');
-  if (!cartContent) return;
+  if (!cartContent) {
+    console.error('cartContent element not found!');
+    return;
+  }
+
+  console.log('Rendering cart with', cart.length, 'items');
 
   if (cart.length === 0) {
+    console.log('Cart is empty, showing empty state');
     cartContent.innerHTML = `
-      <div class="cart-empty rounded-4 shadow-sm animate-fade">
+      <div class="cart-empty rounded-4 shadow-sm">
         <i class="bi bi-cart-x"></i>
         <h2 class="mt-4">Seu carrinho está vazio</h2>
         <p class="text-muted mb-4">Volte ao estoque para adicionar peças e seguir com seu projeto de irrigação.</p>
@@ -71,6 +80,8 @@ function renderCart() {
   }
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  console.log('Cart total:', total, 'Items:', cart.map(i => i.name));
 
   cartContent.innerHTML = `
     <div class="row g-4">
@@ -101,7 +112,7 @@ function renderCart() {
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="cart-summary rounded-4 shadow-sm animate-fade">
+        <div class="cart-summary rounded-4 shadow-sm">
           <h3>Resumo do pedido</h3>
           <p class="text-muted">Itens no carrinho: <strong>${cart.reduce((sum, item) => sum + item.quantity, 0)}</strong></p>
           <p class="fs-4 fw-semibold">Total: ${formatCurrency(total)}</p>
@@ -127,6 +138,7 @@ function renderCart() {
 
 function initCartPage() {
   if (document.body.dataset.cartPage === 'true') {
+    console.log('Cart page detected. Cart items:', cart);
     renderCart();
   }
 }
@@ -134,17 +146,29 @@ function initCartPage() {
 function initAddToCartButtons() {
   document.querySelectorAll('[data-cart-add]').forEach((button) => {
     button.addEventListener('click', () => {
-      addToCart({
+      const itemData = {
         id: button.dataset.id,
         name: button.dataset.name,
         price: Number(button.dataset.price)
-      });
+      };
+      console.log('Adding to cart:', itemData);
+      addToCart(itemData);
     });
   });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM Content Loaded - Cart has', cart.length, 'items');
   updateCartBadge();
   initAddToCartButtons();
   initCartPage();
+  
+  // Força re-render se estiver na página do carrinho
+  setTimeout(() => {
+    if (document.body.dataset.cartPage === 'true') {
+      const cartContent = document.getElementById('cartContent');
+      console.log('CartContent element:', cartContent);
+      console.log('CartContent innerHTML:', cartContent?.innerHTML);
+    }
+  }, 100);
 });
